@@ -265,8 +265,8 @@ a:focus {
 }
 
 .hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 35%;
+    max-height: 35%;
 }
 
 .hero .hero-content {
@@ -492,8 +492,8 @@ a:focus {
 
 .about .about-img img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
 }
 
@@ -675,6 +675,138 @@ a:focus {
     margin: 0;
     font-size: 16px;
 }
+
+
+
+/*******************************/
+/******* Project CSS ********/
+/*******************************/
+.project {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.project .timeline {
+    position: relative;
+    width: 100%;
+}
+
+.project .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #EF233C;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.project .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.project .timeline .timeline-item.left {
+    left: 0;
+    padding-right: 30px;
+}
+
+.project .timeline .timeline-item.right {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.project .timeline .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid #EF233C;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.project .timeline .timeline-item.right::after {
+    left: -8px;
+}
+
+.project .timeline .timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 1;
+  border: 10px solid;
+  border-color: transparent transparent transparent #dddddd;
+}
+
+.project .timeline .timeline-item.right::before {
+  left: 10px;
+  border-color: transparent #dddddd transparent transparent;
+}
+
+.project .timeline .timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #EF233C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.project .timeline .timeline-item.left .timeline-date {
+    text-align: left;
+    left: calc(100% + 55px);
+}
+
+.project .timeline .timeline-item.right .timeline-date {
+    text-align: right;
+    right: calc(100% + 55px);
+}
+
+.project .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 5px solid #dddddd;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.project .timeline .timeline-item.right .timeline-text {
+    border-right: none;
+    border-left: 5px solid #dddddd;
+}
+
+.project .timeline .timeline-text h2 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.project .timeline .timeline-text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.project .timeline .timeline-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
 
 /*******************************/
 /******* Experience CSS ********/
@@ -871,7 +1003,7 @@ a:focus {
 }
 
 .service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
+    box-shadow: inset 800px 0 0 0 #34ef23;
 }
 
 .service .service-icon {
@@ -881,7 +1013,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EF233C;
+    border: 1px solid #318646;
     background: #ffffff;
 }
 
@@ -1717,3 +1849,24 @@ a:focus {
         padding: 0 5px;
     }
 }
+hr.green-hr {
+    border: none;
+    background-color: green;
+    height: 2px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  table, th, td {
+    border: 1px solid black;
+    margin: 50px;
+    margin-inline: 50px;
+  }
+  td, th {
+    height: 50px;
+  }
+  table {
+    align-self: center;
+    align-items: center;
+    text-align: center;
+  }
